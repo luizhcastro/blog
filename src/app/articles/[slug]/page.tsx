@@ -3,7 +3,7 @@ import { Article } from "../../../components/article";
 
 function Tag({ tag }: { tag: string }) {
   return (
-    <div className="flex size-4 w-fit items-center justify-center rounded-full px-2 py-3 text-xs ring-1 ring-zinc-400 dark:ring-1 dark:ring-zinc-500">
+    <div className="flex size-4 w-fit items-center justify-center rounded-full px-2 py-3 text-xs ring-1 ring-zinc-500">
       #{tag}
     </div>
   );
@@ -25,7 +25,7 @@ export default async function ArticlePage({
         </h1>
         <a
           href="/articles"
-          className="underline decoration-sky-500 underline-offset-4 dark:decoration-sky-600"
+          className="underline decoration-sky-600 underline-offset-4"
         >
           Read something else
         </a>
@@ -36,7 +36,7 @@ export default async function ArticlePage({
   return (
     <>
       <div className="flex flex-col items-center justify-center p-8">
-        <div className="text-sm text-zinc-500 max-sm:text-xs dark:text-zinc-400">
+        <div className="text-sm text-zinc-400 max-sm:text-xs">
           {articleData.date} {"//"} {articleData.location}
         </div>
         <div className="flex w-full max-w-prose flex-col items-center justify-center gap-4 px-4 pb-6 pt-1">

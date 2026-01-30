@@ -6,71 +6,74 @@ interface Project {
   name: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
-  url: string;
+  githubUrl?: string;
+  url?: string;
   technologies: ReactNode;
 }
 
 const projects: Project[] = [
   {
-    name: "css2wind",
+    name: "Blaboard",
     description:
-      "Learn TailwindCSS by playing a minigame: there are eight CSS properties that you must translate to the equivalent TailwindCSS utility. Bet you can't get 8/8.",
-    url: "https://css2wind.com",
-    imageUrl: "/projects/css2wind.png",
-    githubUrl: "https://github.com/LukeberryPi/css2wind",
+      "Open source app for project and issue management. Developed by the BeroLab community and maintained by me.",
+    imageUrl: "/projects/blaboard.png",
+    githubUrl: "https://github.com/BeroLab/blaboard",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#007ACC] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
           TypeScript
         </span>
-        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
           TailwindCSS
         </span>
-        <span className="rounded-full bg-black px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-zinc-200 dark:ring-1 dark:ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
           Next.js
         </span>
-      </div>
-    ),
-  },
-  {
-    name: "King's Cross Cinema Schedule",
-    description:
-      "A simpler way to visualize the movies in the Everyman in the Canal 2025 in London. I watched Mean Girls and it was amazing.",
-    url: "https://kings-cross-cinema-schedule-2025.vercel.app/",
-    imageUrl: "/projects/cinema-schedule.png",
-    githubUrl: "https://github.com/LukeberryPi/kings-cross-cinema-website",
-    technologies: (
-      <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#FF5D01] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
-          Astro
-        </span>
-        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
-          Tailwind
-        </span>
-        <span className="rounded-full bg-black px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-none dark:ring-1 dark:ring-zinc-500">
-          Vercel
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
+          Elysiajs
         </span>
       </div>
     ),
   },
   {
-    name: "phived",
+    name: "Ideatrace",
     description:
-      "Stop procrastinating by dealing with five tasks at a time. If you want to add more tasks you need to resolve a previous one. Surprisingly effective.",
-    url: "https://phived.com",
-    imageUrl: "/projects/phived.png",
-    githubUrl: "https://github.com/LukeberryPi/phived",
+      "A smart tool that transforms meeting audio into structured documents.",
+    imageUrl: "/projects/ideatrace.png",
+    githubUrl: "https://github.com/ideatrace-ai/smartdocs",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
-          React
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          Typescript
         </span>
-        <span className="rounded-full bg-[#38BDF9] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          AI Integration
+        </span>
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          RabbitMQ
+        </span>
+      </div>
+    ),
+  },
+  {
+    name: "Peladas.app",
+    description:
+      "A streamlined platform for organizing amateur soccer matches and managing court rentals with ease.",
+    url: "https://peladas.app",
+    imageUrl: "/projects/peladas-logo.png",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          Nextjs
+        </span>
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
           TailwindCSS
         </span>
-        <span className="rounded-full bg-gradient-to-r from-[#926AFE] to-[#49C7FF] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-none dark:ring-1 dark:ring-zinc-500">
-          Vite
+        <span className="rounded-full bg-none px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          Java
+        </span>
+        <span className="rounded-full bg-none px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+          Spring boot
         </span>
       </div>
     ),
@@ -86,7 +89,7 @@ function ProjectCard({
   technologies,
 }: Project) {
   return (
-    <div className="flex-col divide-y divide-zinc-400 dark:divide-zinc-500 overflow-hidden rounded ring-1 dark:zinc-500 dark:ring-zinc-500 ring-zinc-400">
+    <div className="flex-col divide-y divide-zinc-500 overflow-hidden rounded ring-1 ring-zinc-500">
       <div className="flex items-center justify-between gap-4 p-4 max-sm:flex-col">
         <h2 className="text-xl">{name}</h2>
         {technologies}
@@ -100,21 +103,25 @@ function ProjectCard({
         height={630}
         alt="Logo for css2wind website"
       />
-      <div className="flex w-full justify-between divide-x divide-zinc-400 dark:divide-zinc-500">
-        <a
-          href={url}
-          target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-100 sm:dark:hover:bg-zinc-800"
-        >
-          <Globe strokeWidth={1.4} className="size-5" /> Visit website
-        </a>
-        <a
-          href={githubUrl}
-          target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-100 sm:dark:hover:bg-zinc-800"
-        >
-          <GitBranch strokeWidth={1.4} className="size-5" /> View code
-        </a>
+      <div className="flex w-full justify-between divide-x divide-zinc-500">
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-800"
+          >
+            <Globe strokeWidth={1.4} className="size-5" /> Visit website
+          </a>
+        )}
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-800"
+          >
+            <GitBranch strokeWidth={1.4} className="size-5" /> View code
+          </a>
+        )}
       </div>
     </div>
   );

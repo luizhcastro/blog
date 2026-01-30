@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Karla } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 import { ScrollToTop } from "../components/scroll-to-top";
-import Script from "next/script";
 import dynamic from "next/dynamic";
-// import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Luke Berry",
-  description: "Luke Berry's personal website",
+  title: "Luiz Castro",
+  description: "Luiz Castro's personal website",
+  icons: {
+    icon: "/smile.png",
+  },
 };
 
 const karla = Karla({
@@ -26,31 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-screen" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-                  if (theme === 'dark' || (!theme && systemPrefersDark)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {
-                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.classList.add('dark');
-                  }
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="en" className="dark min-h-screen">
       <body className={`${karla.className} min-h-full px-6`}>
         {/*<Analytics />*/}
         <Header />
@@ -58,33 +34,24 @@ export default function RootLayout({
           {children}
           <ScrollToTop />
         </main>
-        <footer className="mx-auto flex max-w-prose flex-col max-sm:items-start items-center gap-2 py-6 text-sm text-zinc-500 dark:text-zinc-400">
+        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-400 max-sm:items-start">
           <div className="flex items-center gap-4">
             <a
-              className="decoration-zinc-500 underline-offset-4 transition-transform sm:hover:underline dark:decoration-zinc-400"
-              href="https://github.com/LukeberryPi/blog"
+              className="decoration-zinc-400 underline-offset-4 transition-transform sm:hover:underline"
+              href="https://github.com/luizhcastro/blog"
               target="_blank"
             >
               Code
             </a>
-            <Link
-              className="decoration-zinc-500 underline-offset-4 transition-transform sm:hover:underline dark:decoration-zinc-400"
-              target="_blank"
-              href="/rss.xml"
-            >
-              RSS Feed
-            </Link>
             <a
-              className="decoration-zinc-500 underline-offset-4 transition-transform sm:hover:underline dark:decoration-zinc-400"
-              href="https://x.com/LukeberryPi"
+              className="decoration-zinc-400 underline-offset-4 transition-transform sm:hover:underline"
+              href="https://x.com/loez__"
               target="_blank"
             >
-              @LukeberryPi
+              @loez__
             </a>
           </div>
-          <blockquote className="text-zinc-800 dark:text-zinc-300">
-            Smile, you&apos;re alive :)
-          </blockquote>
+          <blockquote className="text-zinc-300">just have fun :)</blockquote>
         </footer>
       </body>
     </html>

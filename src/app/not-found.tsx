@@ -6,7 +6,7 @@ export default function NotFound() {
       </h1>
       <a
         href="/"
-        className="underline decoration-sky-500 underline-offset-4 dark:decoration-sky-600"
+        className="underline decoration-sky-600 underline-offset-4"
       >
         Take me home, country road...
       </a>
