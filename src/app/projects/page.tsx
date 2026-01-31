@@ -55,29 +55,6 @@ const projects: Project[] = [
       </div>
     ),
   },
-  {
-    name: "Peladas.app",
-    description:
-      "A streamlined platform for organizing amateur soccer matches and managing court rentals with ease.",
-    url: "https://peladas.app",
-    imageUrl: "/projects/peladas-logo.png",
-    technologies: (
-      <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
-          Nextjs
-        </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
-          TailwindCSS
-        </span>
-        <span className="rounded-full bg-none px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
-          Java
-        </span>
-        <span className="rounded-full bg-none px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
-          Spring boot
-        </span>
-      </div>
-    ),
-  },
 ];
 
 function ProjectCard({
