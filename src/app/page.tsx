@@ -105,9 +105,12 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
       <p className="text-sm">
-        23yo Brazilian Full Stack Engineer. Coding for a couple of years, with a
-        focus on TypeScript and Java. I love innovation, skateboarding, playing
-        football (huge Flamengo fan), and shipping beautiful websites.
+        <span className="font-italic text-[15px] font-normal">
+          Building software
+        </span>
+        . Coding for a couple of years, with a focus on TypeScript and Java.
+        Shipping distributed systems and crafting pixel-perfect frontends that
+        perform as well as they look.
       </p>
       <div className="divide-y divide-zinc-500 overflow-hidden rounded ring-1 ring-zinc-500">
         {externalLinks.map((link: Link) => (
