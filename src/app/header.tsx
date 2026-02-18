@@ -39,6 +39,18 @@ export default function Header() {
               className="absolute left-1/2 mt-1 hidden size-2 fill-sky-600 text-transparent group-aria-[current=page]:block"
             />
           </Link>
+          <Link
+            className="group relative rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
+            href="/thoughts"
+            aria-label="View thoughts"
+            aria-current={path.startsWith("/thoughts") ? "page" : undefined}
+          >
+            /thoughts
+            <Triangle
+              aria-hidden="true"
+              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-600 text-transparent group-aria-[current=page]:block"
+            />
+          </Link>
           {/*<Link
             className="group relative rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
             href="/articles"

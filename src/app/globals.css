@@ -71,4 +71,17 @@
   article a {
     @apply text-zinc-200 underline decoration-sky-600 underline-offset-4;
   }
+
+  article [data-tooltip] {
+    @apply relative cursor-default underline decoration-dotted decoration-zinc-500 underline-offset-4;
+  }
+
+  article [data-tooltip]::after {
+    content: attr(data-tooltip);
+    @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-zinc-700 px-3 py-1.5 text-sm text-zinc-200 opacity-0 transition-opacity;
+  }
+
+  article [data-tooltip]:hover::after {
+    @apply opacity-100;
+  }
 }
