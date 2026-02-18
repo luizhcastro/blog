@@ -73,12 +73,12 @@
   }
 
   article [data-tooltip] {
-    @apply relative cursor-default underline decoration-dotted decoration-zinc-500 underline-offset-4;
+    @apply relative cursor-default italic underline decoration-dotted decoration-zinc-500 underline-offset-4;
   }
 
   article [data-tooltip]::after {
     content: attr(data-tooltip);
-    @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-zinc-700 px-3 py-1.5 text-sm text-zinc-200 opacity-0 transition-opacity;
+    @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-max max-w-[min(20rem,90vw)] -translate-x-1/2 rounded bg-zinc-700 px-3 py-1.5 text-center text-sm not-italic text-zinc-200 opacity-0 transition-opacity;
   }
 
   article [data-tooltip]:hover::after {
