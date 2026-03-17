@@ -1,13 +1,13 @@
 {
-  "name": "luke-berry-blog",
+  "name": "luiz-castr-blog",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "bun .next/standalone/server.js",
     "lint": "next lint",
-    "generate:rss": "node src/scripts/gen-rss.js"
+    "generate:rss": "bun src/scripts/gen-rss.js"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^10.0.0",
