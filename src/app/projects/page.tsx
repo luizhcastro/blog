@@ -1,11 +1,13 @@
 import { GitBranch, Globe } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
+import blaboardImg from "@/public/projects/blaboard.png";
+import ideatraceImg from "@/public/projects/ideatrace.png";
 
 interface Project {
   name: string;
   description: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   githubUrl?: string;
   url?: string;
   technologies: ReactNode;
@@ -16,7 +18,7 @@ const projects: Project[] = [
     name: "Blaboard",
     description:
       "Open source app for project and issue management. Developed by the BeroLab community and maintained by me.",
-    imageUrl: "/projects/blaboard.png",
+    imageUrl: blaboardImg,
     githubUrl: "https://github.com/BeroLab/blaboard",
     technologies: (
       <div className="flex items-center gap-x-3">
@@ -39,7 +41,7 @@ const projects: Project[] = [
     name: "Ideatrace",
     description:
       "A smart tool that transforms meeting audio into structured documents.",
-    imageUrl: "/projects/ideatrace.png",
+    imageUrl: ideatraceImg,
     githubUrl: "https://github.com/ideatrace-ai/smartdocs",
     technologies: (
       <div className="flex items-center gap-x-3">

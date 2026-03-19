@@ -8,6 +8,7 @@ import {
 import { ArrowUpRight, Download, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import berologo from "@/public/berologo.png";
 import type { ReactNode } from "react";
 
 const XLogo = () => {
@@ -24,7 +25,7 @@ const XLogo = () => {
 };
 
 const BeroLogo = () => {
-  return <Image src="/berologo.png" alt="BeroLab" width={24} height={24} />;
+  return <Image src={berologo} alt="BeroLab" width={24} height={24} />;
 };
 
 interface Link {
