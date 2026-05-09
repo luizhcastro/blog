@@ -22,7 +22,7 @@ export default async function ThoughtPage({
           <h1 className="text-center text-5xl max-sm:text-4xl">
             {thought.title}
           </h1>
-          <time className="mt-4 block text-center text-sm text-zinc-400">
+          <time className="mt-4 block text-center text-sm text-zinc-500">
             {thought.date}
           </time>
         </header>

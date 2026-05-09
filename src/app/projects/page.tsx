@@ -22,16 +22,16 @@ const projects: Project[] = [
     githubUrl: "https://github.com/BeroLab/blaboard",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-900 ring-1 ring-zinc-300">
           TypeScript
         </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-900 ring-1 ring-zinc-300">
           TailwindCSS
         </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-900 ring-1 ring-zinc-300">
           Next.js
         </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm text-zinc-900 ring-1 ring-zinc-300">
           Elysiajs
         </span>
       </div>
@@ -45,13 +45,13 @@ const projects: Project[] = [
     githubUrl: "https://github.com/ideatrace-ai/smartdocs",
     technologies: (
       <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-300">
           Typescript
         </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-300">
           AI Integration
         </span>
-        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-500">
+        <span className="rounded-full bg-inherit px-2.5 py-0.5 text-sm ring-1 ring-zinc-300">
           RabbitMQ
         </span>
       </div>
@@ -68,7 +68,7 @@ function ProjectCard({
   technologies,
 }: Project) {
   return (
-    <div className="flex-col divide-y divide-zinc-500 overflow-hidden rounded ring-1 ring-zinc-500">
+    <div className="flex-col divide-y divide-zinc-300 overflow-hidden rounded ring-1 ring-zinc-300">
       <div className="flex items-center justify-between gap-4 p-4 max-sm:flex-col">
         <h2 className="text-xl">{name}</h2>
         {technologies}
@@ -82,12 +82,12 @@ function ProjectCard({
         height={630}
         alt="Logo for css2wind website"
       />
-      <div className="flex w-full justify-between divide-x divide-zinc-500">
+      <div className="flex w-full justify-between divide-x divide-zinc-300">
         {url && (
           <a
             href={url}
             target="_blank"
-            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-800"
+            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-100"
           >
             <Globe strokeWidth={1.4} className="size-5" /> Visit website
           </a>
@@ -96,7 +96,7 @@ function ProjectCard({
           <a
             href={githubUrl}
             target="_blank"
-            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-800"
+            className="flex grow items-center justify-center gap-2 py-4 transition-transform sm:hover:bg-zinc-100"
           >
             <GitBranch strokeWidth={1.4} className="size-5" /> View code
           </a>

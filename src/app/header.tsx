@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, Triangle } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,46 +23,18 @@ export default function Header() {
           </div>
           <div className="flex flex-col max-sm:items-center">
             Luiz Castro
-            <span className="text-zinc-400">Software Engineer</span>
+            <span className="text-zinc-500">Software Engineer</span>
           </div>
         </Link>
         <div className="flex items-center gap-4">
           <Link
-            className="group relative rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
-            href="/projects"
-            aria-label="View projects"
-            aria-current={path === "/projects" ? "page" : undefined}
+            href="/thoughts/what-am-i-looking-for"
+            className="rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
           >
-            /projects
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-600 text-transparent group-aria-[current=page]:block"
-            />
+            <span className="font-italic italic font-normal">
+              What I&apos;m looking for?
+            </span>
           </Link>
-          <Link
-            className="group relative rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
-            href="/thoughts"
-            aria-label="View thoughts"
-            aria-current={path.startsWith("/thoughts") ? "page" : undefined}
-          >
-            /thoughts
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-600 text-transparent group-aria-[current=page]:block"
-            />
-          </Link>
-          {/*<Link
-            className="group relative rounded px-2 py-px ring-sky-600 transition-transform sm:hover:ring-1"
-            href="/articles"
-            aria-label="View articles"
-            aria-current={path.startsWith("/articles") ? "page" : undefined}
-          >
-            /articles
-            <Triangle
-              aria-hidden="true"
-              className="absolute left-1/2 mt-1 hidden size-2 fill-sky-600 text-transparent group-aria-[current=page]:block"
-            />
-          </Link>*/}
         </div>
       </nav>
     </header>

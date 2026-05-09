@@ -17,19 +17,19 @@
 @layer base {
   html,
   body {
-    @apply min-h-screen bg-zinc-900 text-zinc-200;
+    @apply min-h-screen bg-white text-zinc-900;
   }
 
   article p {
-    @apply leading-relaxed text-zinc-300/80;
+    @apply leading-relaxed text-zinc-700/90;
   }
 
   article li {
-    @apply text-zinc-300/80;
+    @apply text-zinc-700/90;
   }
 
   article strong {
-    @apply font-normal text-zinc-200;
+    @apply font-normal text-zinc-900;
   }
 
   article {
@@ -61,24 +61,24 @@
   }
 
   article :not(pre) > code {
-    @apply mx-1 select-all text-nowrap rounded px-1.5 py-0.5 text-sm text-zinc-200 ring-1 ring-zinc-600;
+    @apply mx-1 select-all text-nowrap rounded px-1.5 py-0.5 text-sm text-zinc-900 ring-1 ring-zinc-300;
   }
 
   article pre {
-    @apply overflow-x-auto p-4 text-sm ring-1 ring-zinc-500;
+    @apply overflow-x-auto p-4 text-sm ring-1 ring-zinc-300;
   }
 
   article a {
-    @apply text-zinc-200 underline decoration-sky-600 underline-offset-4;
+    @apply text-zinc-900 underline decoration-sky-600 underline-offset-4;
   }
 
   article [data-tooltip] {
-    @apply relative cursor-default italic underline decoration-dotted decoration-zinc-500 underline-offset-4;
+    @apply relative cursor-default italic underline decoration-dotted decoration-zinc-400 underline-offset-4;
   }
 
   article [data-tooltip]::after {
     content: attr(data-tooltip);
-    @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-max max-w-[min(20rem,90vw)] -translate-x-1/2 rounded bg-zinc-700 px-3 py-1.5 text-center text-sm not-italic text-zinc-200 opacity-0 transition-opacity;
+    @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-max max-w-[min(20rem,90vw)] -translate-x-1/2 rounded bg-zinc-900 px-3 py-1.5 text-center text-sm not-italic text-white opacity-0 transition-opacity;
   }
 
   article [data-tooltip]:hover::after {

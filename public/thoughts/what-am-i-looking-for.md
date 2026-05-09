@@ -14,4 +14,4 @@ People who live in the present and have full self‑awareness, when they encount
 ### What am I looking for? 
 **I seek many things:** recognition, to work at what I love, to love, to be loved, to help others, to be present, to live every phase, every feeling, every moment of my life authentically.
 
-**Whatever you do, homie, put your heart into it and stay strong.**
+**Whatever you do, put your heart into it and stay strong.**

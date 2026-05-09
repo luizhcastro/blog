@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark min-h-screen">
+    <html lang="en" className="min-h-screen">
       <body className={`${karla.className} ${Italic.variable} min-h-full px-6`}>
         {/*<Analytics />*/}
         <Header />
@@ -41,24 +41,8 @@ export default function RootLayout({
           {children}
           <ScrollToTop />
         </main>
-        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-400">
-          <div className="flex items-center gap-4">
-            <a
-              className="decoration-zinc-400 underline-offset-4 transition-transform sm:hover:underline"
-              href="https://github.com/luizhcastro/blog"
-              target="_blank"
-            >
-              Code
-            </a>
-            <a
-              className="decoration-zinc-400 underline-offset-4 transition-transform sm:hover:underline"
-              href="https://x.com/loez__"
-              target="_blank"
-            >
-              @loez__
-            </a>
-          </div>
-          <blockquote className="text-zinc-300">just have fun :)</blockquote>
+        <footer className="mx-auto flex max-w-prose flex-col items-center gap-2 py-6 text-sm text-zinc-500">
+          <blockquote className="text-zinc-600">just have fun :)</blockquote>
         </footer>
       </body>
     </html>
