@@ -9,6 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import berologo from "@/public/berologo.png";
+import curriculol from "@/public/curriculol.png";
 import type { ReactNode } from "react";
 
 const XLogo = () => {
@@ -26,6 +27,10 @@ const XLogo = () => {
 
 const BeroLogo = () => {
   return <Image src={berologo} alt="BeroLab" width={24} height={24} />;
+};
+
+const CurriculolLogo = () => {
+  return <Image src={curriculol} alt="Curricu.lol" width={24} height={24} />;
 };
 
 interface Link {
@@ -77,6 +82,12 @@ const externalLinks: Link[] = [
     description: "deploy everything easily",
     url: "https://railway.com?referralCode=vO6wl2",
     icon: <SiRailway className="fill-zinc-900" />,
+  },
+  {
+    name: "Resume Review",
+    description: "evaluate your resume for jobs",
+    url: "https://curricu.lol/r/XMtJBuL",
+    icon: <CurriculolLogo />,
   },
 ];
 
